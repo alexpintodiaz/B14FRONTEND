@@ -1,0 +1,95 @@
+<h2>LISTA DE POSGRADOS</h2>
+<table border="2">
+    <thead>
+        <tr>
+            <td>Nombre Posgrado</td>
+            <td>Universidad</td>
+            <td>Materias</td>
+            <td>Nombre Materia</td>
+            <td>Intensidad Horaria</td>
+            <td>Descripción</td>
+            <td>Eliminar</td>
+            <td>Ver</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let posgrado of listaPosgrados">
+            <td>{{posgrado.nombrePosgrado}}</td>
+            <td>{{posgrado.universidad}}</td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <button (click)="Eliminar(posgrado._id)">
+                <img height="20" src="../../../assets/imagenes/vcsconflicting_93497.png">
+              </button>
+            </td>
+            <td>
+                <button (click)="Ver(posgrado)">
+                  <img height="20" src="../../../assets/imagenes/loupe_79257.png">
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<hr/>
+<table>
+    <tr>
+        <td>Nombre Posgrado:</td>
+        <td>
+            <input type="text" name="nombrePosgrado" [(ngModel)]="posgrado.nombrePosgrado">
+        </td>
+    </tr>
+    <tr>
+        <td>Universidad:</td>
+        <td>
+            <input type="text" name="universidad" [(ngModel)]="posgrado.universidad">
+        </td>
+    </tr>
+    <tr>
+        <td>Materias:</td>
+        <td>
+            <input type="text" name="materias" [(ngModel)]="posgrado.materias">
+        </td>
+    </tr>
+    <tr>
+        <td>Nombre Materia:</td>
+        <td>
+
+        </td>
+    </tr>
+    <tr>
+        <td>Intensidad Horaria:</td>
+        <td>
+
+        </td>
+    </tr>
+    <tr>
+        <td>Descripción:</td>
+        <td>
+
+        </td>
+    </tr>
+    <td>
+        <hr/>
+    </td>
+    <td>
+        <hr/>
+    </td>
+    <tr>
+        <td>
+            <button (click)="Guardar()">Guardar</button>
+        </td>
+        <td>
+            <button (click)="LimpiarFormulario()">Limpiar Formulario</button>
+        </td>
+    </tr>
+</table>
+<hr/>
